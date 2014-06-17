@@ -1,0 +1,22 @@
+{
+	"name": "bartekb/di",
+	"description": "PHP IoC by BB",
+	"version": "0.0.1-alpha",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Bartosz Borowik",
+			"email": "bartosz@borowik.net"
+		}
+	],
+	"require": {
+	},
+	"require-dev": {
+		"phpunit/phpunit": "3.7.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"DI\\": "core"
+		}
+	}
+}
