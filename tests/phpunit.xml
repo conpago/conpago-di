@@ -29,6 +29,17 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">../src</directory>
+			<exclude>
+				<file>../src/Saigon/Conpago/DI/di.php</file>
+				<file>../src/Saigon/Conpago/DI/Builders/builders.php</file>
+				<file>../src/Saigon/Conpago/DI/Exceptions/exceptions.php</file>
+				<file>../src/Saigon/Conpago/DI/Implementation/implementation.php</file>
+				<file>../src/Saigon/Conpago/DI/Parameters/parameters.php</file>
+				<file>../src/Saigon/Conpago/DI/Registerers/registerers.php</file>
+				<file>../src/Saigon/Conpago/DI/Resolvables/resolvables.php</file>
+				<file>../src/Saigon/Conpago/DI/Serializers/serializers.php</file>
+				<file>../src/Saigon/Conpago/DI/Transformers/transformers.php</file>
+			</exclude>
         </whitelist>
     </filter>
 </phpunit>
