@@ -1,6 +1,6 @@
 <?php
 
-namespace DI\Implementation;
+namespace Saigon\Conpago\DI\Implementation;
 
 interface IIntermediate
 {

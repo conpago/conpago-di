@@ -1,6 +1,6 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -100,7 +100,7 @@ class ResolveTypeInNamespace extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_ResolveParamInNamespaceFromSameNamespace_Fail()
 	{

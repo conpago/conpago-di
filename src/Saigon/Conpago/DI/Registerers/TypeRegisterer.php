@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Registerers;
+namespace Saigon\Conpago\DI\Registerers;
 
-use DI\Builders\TypeBuilder;
-use DI\Exceptions\RegisteringInvalidTypeException;
-use DI\ITypeRegisterer;
+use Saigon\Conpago\DI\Builders\TypeBuilder;
+use Saigon\Conpago\DI\Exceptions\RegisteringInvalidTypeException;
+use Saigon\Conpago\DI\ITypeRegisterer;
 
 class TypeRegisterer extends Registerer implements ITypeRegisterer
 {
@@ -90,7 +90,7 @@ class TypeRegisterer extends Registerer implements ITypeRegisterer
 	{
 		return $this->onActivated;
 	}
-	
+
 	private function checkIfValidTypeName($typeName)
 	{
 		if (!is_string($typeName))

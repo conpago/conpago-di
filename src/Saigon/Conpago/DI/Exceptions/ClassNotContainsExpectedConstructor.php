@@ -6,7 +6,7 @@
 	 * Time: 22:33
 	 */
 
-	namespace DI\Exceptions;
+	namespace Saigon\Conpago\DI\Exceptions;
 
 
 	class ClassNotContainsExpectedConstructor extends \Exception

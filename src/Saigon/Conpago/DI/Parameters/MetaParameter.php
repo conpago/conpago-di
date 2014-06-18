@@ -1,9 +1,9 @@
 <?php
 
-namespace DI\Parameters;
+namespace Saigon\Conpago\DI\Parameters;
 
-use DI\NamedParameter;
-use DI\Transformers\MetaTransformer;
+use Saigon\Conpago\DI\NamedParameter;
+use Saigon\Conpago\DI\Transformers\MetaTransformer;
 
 class MetaParameter extends Parameter
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
 require_once 'DITestCase.php';
 
 class RegisterTypeAsSelfTest extends DITestCase
 {
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsSelf_ResolveBase_Fail()
 	{
@@ -29,7 +29,7 @@ class RegisterTypeAsSelfTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsSelf_ResolveInterface_Fail()
 	{

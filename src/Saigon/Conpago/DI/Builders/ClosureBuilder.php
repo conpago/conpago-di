@@ -1,9 +1,9 @@
 <?php
 
-namespace DI\Builders;
+namespace Saigon\Conpago\DI\Builders;
 
-use DI\Registerers\ClosureRegisterer;
-use DI\Resolvables\ClosureResolvable;
+use Saigon\Conpago\DI\Registerers\ClosureRegisterer;
+use Saigon\Conpago\DI\Resolvables\ClosureResolvable;
 
 class ClosureBuilder extends Builder
 {

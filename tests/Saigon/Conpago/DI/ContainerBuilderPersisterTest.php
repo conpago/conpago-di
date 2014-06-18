@@ -1,11 +1,11 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
 use Mocks\ContainerBuilderStorage;
 
-require_once 'tests/core/di/mocks/ContainerBuilderStorage.php';
-require_once 'tests/core/di/helpers/Classes.php';
+require_once 'tests/Saigon/Conpago/DI/mocks/ContainerBuilderStorage.php';
+require_once 'tests/Saigon/Conpago/DI/helpers/Classes.php';
 
 class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 {
@@ -179,7 +179,7 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\SerializingClosureException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\SerializingClosureException
 	 */
 	public function test_FunctionClosure_Fail()
 	{

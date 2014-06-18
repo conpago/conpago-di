@@ -72,7 +72,7 @@ class ClassQ
 	public function __construct($classGFactory)
 	{ $this->classGFactory = $classGFactory; }
 	public function getClassG($value, $value2)
-	{ return $this->classGFactory->createInstance(DI\Parameter::def(), $value, DI\Parameter::def(), $value2); }
+	{ return $this->classGFactory->createInstance(Saigon\Conpago\DI\Parameter::def(), $value, Saigon\Conpago\DI\Parameter::def(), $value2); }
 }
 
 class ClassR
@@ -122,9 +122,9 @@ class ClassZZ
 	public function __construct($zFactory)
 	{ $this->zFactory = $zFactory; }
 	public function getZ1(ClassE $e)
-	{ return $this->zFactory->createInstance(DI\Parameter::def(), '', $e); }
+	{ return $this->zFactory->createInstance(Saigon\Conpago\DI\Parameter::def(), '', $e); }
 	public function getZ2(ClassE $e)
-	{ return $this->zFactory->createInstance($e, '', DI\Parameter::def()); }
+	{ return $this->zFactory->createInstance($e, '', Saigon\Conpago\DI\Parameter::def()); }
 }
 
 class ClassAA

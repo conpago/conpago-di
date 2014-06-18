@@ -1,6 +1,6 @@
 <?php
 
-namespace DI\Exceptions;
+namespace Saigon\Conpago\DI\Exceptions;
 
 class RegisteringInvalidTypeException extends \Exception
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Parameters;
+namespace Saigon\Conpago\DI\Parameters;
 
-use DI\Implementation\IResolver;
-use DI\NamedParameter;
-use DI\Transformers\ITransformer;
+use Saigon\Conpago\DI\Implementation\IResolver;
+use Saigon\Conpago\DI\NamedParameter;
+use Saigon\Conpago\DI\Transformers\ITransformer;
 
 abstract class Parameter implements IParameter
 {

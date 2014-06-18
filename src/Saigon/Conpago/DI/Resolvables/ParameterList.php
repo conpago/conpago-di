@@ -1,11 +1,11 @@
 <?php
 
-namespace DI\Resolvables;
+namespace Saigon\Conpago\DI\Resolvables;
 
-use DI\DefaultParameter;
-use DI\Implementation\IResolver;
-use DI\NamedParameter;
-use DI\Parameter;
+use Saigon\Conpago\DI\DefaultParameter;
+use Saigon\Conpago\DI\Implementation\IResolver;
+use Saigon\Conpago\DI\NamedParameter;
+use Saigon\Conpago\DI\Parameter;
 
 class ParameterList
 {
@@ -81,7 +81,7 @@ class ParameterList
 
 	private function tryCreateParameter($className, $parameterInfo, $overridenValue)
 	{
-		$qualifiedClassName = 'DI\\Parameters\\' . $className;
+		$qualifiedClassName = 'Saigon\\Conpago\\DI\\Parameters\\' . $className;
 		return $qualifiedClassName::tryCreate($parameterInfo, $overridenValue);
 	}
 

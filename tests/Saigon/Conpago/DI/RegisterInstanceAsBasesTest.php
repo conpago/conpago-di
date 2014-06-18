@@ -1,6 +1,6 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -14,7 +14,7 @@ class RegisterInstanceAsBasesTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsBases_ResolveSelf_Fail()
 	{
@@ -23,7 +23,7 @@ class RegisterInstanceAsBasesTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsMissingBases_ResolveSelf_Fail()
 	{
@@ -32,7 +32,7 @@ class RegisterInstanceAsBasesTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsBases_ResolveInterface_Fail()
 	{
@@ -49,7 +49,7 @@ class RegisterInstanceAsBasesTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsBasesAndSelf_ResolveInterface_Fail()
 	{

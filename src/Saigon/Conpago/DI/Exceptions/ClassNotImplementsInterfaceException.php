@@ -7,7 +7,7 @@
 	 * Time: 22:13
 	 */
 
-	namespace DI\Exceptions;
+	namespace Saigon\Conpago\DI\Exceptions;
 
 	class ClassNotImplementsInterfaceException  extends \Exception
 	{
