@@ -1,4 +1,6 @@
 syntax: glob
-.gitignore
+nbproject
+tmp
 vendor
 .idea
+build

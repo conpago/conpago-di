@@ -1,6 +1,6 @@
 {
-	"name": "bartekb/di",
-	"description": "PHP IoC by BB",
+	"name": "saigon/conpago-di",
+	"description": "Conpago.DI",
 	"version": "0.0.1-alpha",
 	"type": "library",
 	"authors": [
