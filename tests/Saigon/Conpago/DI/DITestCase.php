@@ -1,10 +1,10 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
-require_once 'tests/core/di/helpers/Classes.php';
-require_once 'tests/core/di//helpers/ClassesInTestNamespace.php';
-require_once 'tests/core/di//helpers/ClassesInTestSubNamespace.php';
+require_once 'tests/Saigon/Conpago/DI/helpers/Classes.php';
+require_once 'tests/Saigon/Conpago/DI/helpers/ClassesInTestNamespace.php';
+require_once 'tests/Saigon/Conpago/DI/helpers/ClassesInTestSubNamespace.php';
 
 abstract class DITestCase extends \PHPUnit_Framework_TestCase
 {
@@ -30,7 +30,6 @@ abstract class DITestCase extends \PHPUnit_Framework_TestCase
 	 */
 	protected function registerType($id)
 	{
-		$this->builder->registerType('')->onActivated()
 		return $this->builder->registerType($id);
 	}
 
@@ -74,7 +73,7 @@ abstract class DITestCase extends \PHPUnit_Framework_TestCase
 
 	/**
 	 * @var IContainer
-	 * @return \DI\IContainer
+	 * @return \Saigon\Conpago\DI\IContainer
 	 */
 	protected function getContainer()
 	{

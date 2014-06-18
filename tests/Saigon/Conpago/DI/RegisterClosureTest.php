@@ -1,6 +1,6 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -17,7 +17,7 @@ class RegisterClosureTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\UnrelatedClassesException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\UnrelatedClassesException
 	 */
 	public function test_Register_ResolveUnrelated_Fail()
 	{

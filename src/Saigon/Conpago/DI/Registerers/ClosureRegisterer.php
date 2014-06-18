@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Registerers;
+namespace Saigon\Conpago\DI\Registerers;
 
-use DI\Builders\ClosureBuilder;
-use DI\IClosureRegisterer;
-use DI\Exceptions\RegisteringInvalidClosureException;
+use Saigon\Conpago\DI\Builders\ClosureBuilder;
+use Saigon\Conpago\DI\IClosureRegisterer;
+use Saigon\Conpago\DI\Exceptions\RegisteringInvalidClosureException;
 
 class ClosureRegisterer extends Registerer implements IClosureRegisterer
 {

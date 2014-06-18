@@ -1,8 +1,8 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
-use DI\Implementation\Intermediate;
+use Saigon\Conpago\DI\Implementation\Intermediate;
 
 class Lazy extends Intermediate
 {

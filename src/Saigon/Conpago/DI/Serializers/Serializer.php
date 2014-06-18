@@ -1,6 +1,6 @@
 <?php
 
-namespace DI\Serializers;
+namespace Saigon\Conpago\DI\Serializers;
 
 class Serializer implements ISerializer
 {
@@ -65,15 +65,15 @@ class Serializer implements ISerializer
 
 	private function makeSerializerFor($componentClass)
 	{
-		if ($componentClass == 'DI\\Registerers\\TypeRegisterer')
+		if ($componentClass == 'Saigon\\Conpago\\DI\\Registerers\\TypeRegisterer')
 			return new TypeSerializer();
-		if ($componentClass == 'DI\\Registerers\\InstanceRegisterer')
+		if ($componentClass == 'Saigon\\Conpago\\DI\\Registerers\\InstanceRegisterer')
 			return new InstanceSerializer();
-		if ($componentClass == 'DI\\Registerers\\ClosureRegisterer')
+		if ($componentClass == 'Saigon\\Conpago\\DI\\Registerers\\ClosureRegisterer')
 			return new ClosureSerializer();
-		if ($componentClass == 'DI\\NamedParameter')
+		if ($componentClass == 'Saigon\\Conpago\\DI\\NamedParameter')
 			return new NamedParameterSerializer();
-		if ($componentClass == 'DI\\DefaultParameter')
+		if ($componentClass == 'Saigon\\Conpago\\DI\\DefaultParameter')
 			return new DefaultParameterSerializer();
 		throw new \RuntimeException("Unknown component type: {$componentClass}");
 	}

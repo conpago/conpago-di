@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Implementation;
+namespace Saigon\Conpago\DI\Implementation;
 
-use DI\Builders\IBuilder;
-use DI\Resolvables\CompositeResolvable;
-use DI\Resolvables\IResolvable;
+use Saigon\Conpago\DI\Builders\IBuilder;
+use Saigon\Conpago\DI\Resolvables\CompositeResolvable;
+use Saigon\Conpago\DI\Resolvables\IResolvable;
 
 class TypeRepositoryBuilder
 {

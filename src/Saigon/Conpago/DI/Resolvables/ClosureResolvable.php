@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Resolvables;
+namespace Saigon\Conpago\DI\Resolvables;
 
-use DI\IContainer;
-use DI\Implementation\IResolver;
-use DI\Transformers\ITransformer;
+use Saigon\Conpago\DI\IContainer;
+use Saigon\Conpago\DI\Implementation\IResolver;
+use Saigon\Conpago\DI\Transformers\ITransformer;
 
 class ClosureResolvable extends InstantiableResolvable
 {

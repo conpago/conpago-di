@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Builders;
+namespace Saigon\Conpago\DI\Builders;
 
-use DI\Registerers\TypeRegisterer;
-use DI\Resolvables\ParameterList;
-use DI\Resolvables\TypeResolvable;
+use Saigon\Conpago\DI\Registerers\TypeRegisterer;
+use Saigon\Conpago\DI\Resolvables\ParameterList;
+use Saigon\Conpago\DI\Resolvables\TypeResolvable;
 
 class TypeBuilder extends TypeableBuilder
 {

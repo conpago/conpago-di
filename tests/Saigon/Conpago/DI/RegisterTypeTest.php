@@ -1,6 +1,6 @@
 <?php
 
-namespace DI;
+namespace Saigon\Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -21,7 +21,7 @@ class RegisterTypeTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\RegisteringInvalidTypeException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\RegisteringInvalidTypeException
 	 */
 	public function test_RegisterNotAType_Fail()
 	{
@@ -36,7 +36,7 @@ class RegisterTypeTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterPlain_ResolveBase_Fail()
 	{
@@ -50,7 +50,7 @@ class RegisterTypeTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\UnrelatedClassesException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\UnrelatedClassesException
 	 */
 	public function test_RegisterPlain_ResolveUnrelated_Fail()
 	{
@@ -83,7 +83,7 @@ class RegisterTypeTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsFarBase_ResolveNearBase_Fail()
 	{
@@ -92,7 +92,7 @@ class RegisterTypeTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsBase_ResolveSelf_Fail()
 	{
@@ -101,7 +101,7 @@ class RegisterTypeTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsBase_ResolveFarBase_Fail()
 	{
@@ -109,7 +109,7 @@ class RegisterTypeTest extends DITestCase
 		$this->resolve('ClassA');
 	}
 	/**
-	 * @expectedException \DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterAsInterface_ResolveAnotherInterface_Fail()
 	{

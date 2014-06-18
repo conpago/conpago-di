@@ -1,9 +1,9 @@
 <?php
 
-namespace DI\Parameters;
+namespace Saigon\Conpago\DI\Parameters;
 
-use DI\NamedParameter;
-use DI\Transformers\FactoryTransformer;
+use Saigon\Conpago\DI\NamedParameter;
+use Saigon\Conpago\DI\Transformers\FactoryTransformer;
 
 class FactoryParameter extends Parameter
 {

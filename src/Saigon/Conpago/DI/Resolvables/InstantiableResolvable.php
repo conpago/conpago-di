@@ -1,9 +1,9 @@
 <?php
 
-namespace DI\Resolvables;
+namespace Saigon\Conpago\DI\Resolvables;
 
-use DI\Implementation\IResolver;
-use DI\Transformers\ITransformer;
+use Saigon\Conpago\DI\Implementation\IResolver;
+use Saigon\Conpago\DI\Transformers\ITransformer;
 
 abstract class InstantiableResolvable implements IResolvable
 {

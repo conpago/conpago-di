@@ -1,10 +1,10 @@
 <?php
 
-namespace DI\Transformers;
+namespace Saigon\Conpago\DI\Transformers;
 
-use DI\Implementation\IResolver;
-use DI\Lazy;
-use DI\Resolvables\InstantiableResolvable;
+use Saigon\Conpago\DI\Implementation\IResolver;
+use Saigon\Conpago\DI\Lazy;
+use Saigon\Conpago\DI\Resolvables\InstantiableResolvable;
 
 class LazyTransformer extends Transformer
 {

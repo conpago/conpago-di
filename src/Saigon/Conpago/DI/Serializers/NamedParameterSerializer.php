@@ -1,8 +1,8 @@
 <?php
 
-namespace DI\Serializers;
+namespace Saigon\Conpago\DI\Serializers;
 
-use DI\Parameter;
+use Saigon\Conpago\DI\Parameter;
 
 class NamedParameterSerializer implements ISerializer
 {

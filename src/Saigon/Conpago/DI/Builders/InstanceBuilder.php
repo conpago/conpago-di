@@ -1,9 +1,9 @@
 <?php
 
-namespace DI\Builders;
+namespace Saigon\Conpago\DI\Builders;
 
-use DI\Registerers\InstanceRegisterer;
-use DI\Resolvables\InstanceResolvable;
+use Saigon\Conpago\DI\Registerers\InstanceRegisterer;
+use Saigon\Conpago\DI\Resolvables\InstanceResolvable;
 
 class InstanceBuilder extends TypeableBuilder
 {
