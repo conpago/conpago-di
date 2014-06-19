@@ -49,5 +49,6 @@ class CompositeResolvable implements IResolvable
 		return null;
 	}
 
+	/** @var array IResolvable */
 	private $components = array();
 }

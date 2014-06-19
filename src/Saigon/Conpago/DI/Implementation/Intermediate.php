@@ -18,11 +18,17 @@ abstract class Intermediate implements IIntermediate
 		return $this->target->getTargetName();
 	}
 
+	/**
+	 * @return IResolvable
+	 */
 	protected function getTarget()
 	{
 		return $this->target;
 	}
 
+	/**
+	 * @return IResolver
+	 */
 	protected function getContainer()
 	{
 		return $this->container;

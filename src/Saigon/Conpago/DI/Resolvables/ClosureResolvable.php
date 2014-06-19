@@ -2,7 +2,6 @@
 
 namespace Saigon\Conpago\DI\Resolvables;
 
-use Saigon\Conpago\DI\IContainer;
 use Saigon\Conpago\DI\Implementation\IResolver;
 use Saigon\Conpago\DI\Transformers\ITransformer;
 
@@ -26,7 +25,7 @@ class ClosureResolvable extends InstantiableResolvable
 		return $result;
 	}
 
-	private static function resolveFromCode(IContainer $container, $code)
+	private static function resolveFromCode($code)
 	{
 		return eval($code . ';');
 	}
