@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+	namespace Saigon\Conpago\DI;
 
-interface IPersistableContainerBuilder
-{
-	function getConfiguration();
-}
+	interface IPersistableContainerBuilder
+	{
+		function getConfiguration();
+	}

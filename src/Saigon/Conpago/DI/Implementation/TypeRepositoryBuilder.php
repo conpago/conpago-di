@@ -8,9 +8,9 @@ use Saigon\Conpago\DI\Resolvables\IResolvable;
 
 class TypeRepositoryBuilder
 {
-	public function __construct(array $regiterers)
+	public function __construct(array $registerers)
 	{
-		$this->registerers = $regiterers;
+		$this->registerers = $registerers;
 	}
 
 	public function build()

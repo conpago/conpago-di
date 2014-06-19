@@ -12,7 +12,7 @@ class NamedParameter implements IParameter
 		$this->targetName = $target;
 	}
 
-	public static function tryCreate(\ReflectionParameter $parameter, $overridenValue)
+	public static function tryCreate($overridenValue)
 	{
 		if (!($overridenValue instanceof \Saigon\Conpago\DI\NamedParameter))
 			return null;

@@ -35,7 +35,7 @@ class ContainerBuilderPersister implements IContainerBuilderPersister
 	/**
 	 * loads builder from storage
 	 *
-	 * @return ContainerBuilder|IContainerBuilder
+	 * @return IContainerBuilder
 	 */
 	public function loadContainerBuilder()
 	{
