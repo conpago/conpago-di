@@ -16,8 +16,7 @@
 		"pdepend/pdepend": "2.0.0",
 		"phpmd/phpmd": "2.0.0",
 		"squizlabs/php_codesniffer": "1.5.3",
-		"sebastian/phpcpd": "2.0.1",
-		"sebastian/phpdcd": "1.0.2"
+		"sebastian/phpcpd": "2.0.1"
 	},
 	"autoload": {
 		"psr-0": {
