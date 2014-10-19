@@ -114,7 +114,7 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 		$this->builder->registerType('ClassE2')->withParams(Parameter::named('f1'))->named('f2');
 		$this->exchange();
 		$f = $this->container->resolveNamed('f2');
-		$this->assertEquals('f1', $f->value->value);
+		$this->assertEquals('f1', $f->value->getName());
 	}
 
 	public function test_TypeSingleton()
