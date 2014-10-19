@@ -2,12 +2,20 @@
 
 namespace Saigon\Conpago\DI\Transformers;
 
-use Saigon\Conpago\DI\Factory;
+use Saigon\Conpago\DI\IFactory;
+use Saigon\Conpago\DI\Implementation\Factory;
 use Saigon\Conpago\DI\Implementation\IResolver;
 use Saigon\Conpago\DI\Resolvables\InstantiableResolvable;
 
 class FactoryTransformer extends Transformer
 {
+	/**
+	 * @param InstantiableResolvable $instantiable
+	 * @param IResolver $container
+	 * @param $parameters
+	 *
+	 * @return IFactory
+	 */
 	public function transformInstantiable(InstantiableResolvable $instantiable, IResolver $container, $parameters)
 	{
 		return new Factory($container, $instantiable);
