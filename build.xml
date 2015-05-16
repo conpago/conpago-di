@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <project name="Conpago.DI" default="build" basedir=".">
-	<description>Conpago.DI</description>
+	<description>Conpago framework dependency injection container.</description>
 
 	<property name="src" location="src"/>
 	<property name="lib" location="lib"/>
