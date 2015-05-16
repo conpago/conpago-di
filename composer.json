@@ -3,6 +3,7 @@
 	"description": "Conpago.DI",
 	"version": "0.0.1-alpha",
 	"type": "library",
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Bartosz Borowik",
