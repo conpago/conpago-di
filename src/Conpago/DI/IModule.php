@@ -6,7 +6,7 @@
 	 * Time: 15:30
 	 */
 
-	namespace Saigon\Conpago\DI;
+	namespace Conpago\DI;
 
 	interface IModule
 	{

@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 require_once 'DITestCase.php';
 

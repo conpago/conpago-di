@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI\Builders;
+namespace Conpago\DI\Builders;
 
-use Saigon\Conpago\DI\Registerers\IRegisterer;
+use Conpago\DI\Registerers\IRegisterer;
 
 abstract class TypeableBuilder extends Builder
 {

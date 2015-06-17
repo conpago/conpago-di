@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 use Mocks\ContainerBuilderStorage;
 
@@ -179,7 +179,7 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\SerializingClosureException
+	 * @expectedException \Conpago\DI\Exceptions\SerializingClosureException
 	 */
 	public function test_FunctionClosure_Fail()
 	{

@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI\Registerers;
+namespace Conpago\DI\Registerers;
 
 abstract class Registerer implements IRegisterer
 {

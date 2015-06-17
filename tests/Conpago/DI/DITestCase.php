@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 require_once realpath(__DIR__.'/../../../Saigon/Conpago/DI/helpers/Classes.php');
 require_once realpath(__DIR__.'/../../../Saigon/Conpago/DI/helpers/ClassesInTestNamespace.php');
@@ -73,7 +73,7 @@ abstract class DITestCase extends \PHPUnit_Framework_TestCase
 
 	/**
 	 * @var IContainer
-	 * @return \Saigon\Conpago\DI\IContainer
+	 * @return \Conpago\DI\IContainer
 	 */
 	protected function getContainer()
 	{

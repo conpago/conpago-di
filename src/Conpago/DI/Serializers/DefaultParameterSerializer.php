@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI\Serializers;
+namespace Conpago\DI\Serializers;
 
-use Saigon\Conpago\DI\Parameter;
+use Conpago\DI\Parameter;
 
 class DefaultParameterSerializer implements ISerializer
 {

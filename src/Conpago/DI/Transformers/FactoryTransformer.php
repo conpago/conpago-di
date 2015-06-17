@@ -1,11 +1,11 @@
 <?php
 
-namespace Saigon\Conpago\DI\Transformers;
+namespace Conpago\DI\Transformers;
 
-use Saigon\Conpago\DI\IFactory;
-use Saigon\Conpago\DI\Implementation\Factory;
-use Saigon\Conpago\DI\Implementation\IResolver;
-use Saigon\Conpago\DI\Resolvables\InstantiableResolvable;
+use Conpago\DI\IFactory;
+use Conpago\DI\Implementation\Factory;
+use Conpago\DI\Implementation\IResolver;
+use Conpago\DI\Resolvables\InstantiableResolvable;
 
 class FactoryTransformer extends Transformer
 {

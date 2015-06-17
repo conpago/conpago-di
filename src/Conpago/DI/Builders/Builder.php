@@ -1,9 +1,9 @@
 <?php
 
-namespace Saigon\Conpago\DI\Builders;
+namespace Conpago\DI\Builders;
 
-use Saigon\Conpago\DI\Registerers\IRegisterer;
-use Saigon\Conpago\DI\Resolvables\AliasResolvable;
+use Conpago\DI\Registerers\IRegisterer;
+use Conpago\DI\Resolvables\AliasResolvable;
 
 abstract class Builder implements IBuilder
 {

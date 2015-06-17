@@ -1,9 +1,9 @@
 <?php
 
-namespace Saigon\Conpago\DI\Implementation;
+namespace Conpago\DI\Implementation;
 
-use Saigon\Conpago\DI\Resolvables\InstantiableResolvable;
-use Saigon\Conpago\DI\Resolvables\IResolvable;
+use Conpago\DI\Resolvables\InstantiableResolvable;
+use Conpago\DI\Resolvables\IResolvable;
 
 abstract class Intermediate implements IIntermediate
 {

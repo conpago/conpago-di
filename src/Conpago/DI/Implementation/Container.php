@@ -1,9 +1,9 @@
 <?php
 
-namespace Saigon\Conpago\DI\Implementation;
+namespace Conpago\DI\Implementation;
 
-use Saigon\Conpago\DI\IContainer;
-use Saigon\Conpago\DI\Transformers\DirectTransformer;
+use Conpago\DI\IContainer;
+use Conpago\DI\Transformers\DirectTransformer;
 
 class Container implements IContainer
 {

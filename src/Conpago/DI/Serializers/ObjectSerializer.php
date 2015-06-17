@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI\Serializers;
+namespace Conpago\DI\Serializers;
 
 abstract class ObjectSerializer implements ISerializer
 {

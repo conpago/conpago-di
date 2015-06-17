@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI\Serializers;
+namespace Conpago\DI\Serializers;
 
-use Saigon\Conpago\DI\Registerers\InstanceRegisterer;
+use Conpago\DI\Registerers\InstanceRegisterer;
 
 class InstanceSerializer extends ObjectSerializer
 {

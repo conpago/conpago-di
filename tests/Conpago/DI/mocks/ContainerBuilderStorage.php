@@ -9,7 +9,7 @@
 namespace Mocks;
 
 
-use Saigon\Conpago\DI\IContainerBuilderStorage;
+use Conpago\DI\IContainerBuilderStorage;
 
 class ContainerBuilderStorage implements IContainerBuilderStorage {
 

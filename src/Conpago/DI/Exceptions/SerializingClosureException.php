@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI\Exceptions;
+namespace Conpago\DI\Exceptions;
 
 class SerializingClosureException extends \Exception
 {

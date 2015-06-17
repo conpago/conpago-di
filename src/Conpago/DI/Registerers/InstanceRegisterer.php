@@ -1,11 +1,11 @@
 <?php
 
-namespace Saigon\Conpago\DI\Registerers;
+namespace Conpago\DI\Registerers;
 
-use Saigon\Conpago\DI\Builders\InstanceBuilder;
-use Saigon\Conpago\DI\Exceptions\RegisteringInvalidInstanceException;
-use Saigon\Conpago\DI\Exceptions\UnrelatedClassesException;
-use Saigon\Conpago\DI\IInstanceRegisterer;
+use Conpago\DI\Builders\InstanceBuilder;
+use Conpago\DI\Exceptions\RegisteringInvalidInstanceException;
+use Conpago\DI\Exceptions\UnrelatedClassesException;
+use Conpago\DI\IInstanceRegisterer;
 
 class InstanceRegisterer extends Registerer implements IInstanceRegisterer
 {

@@ -1,5 +1,5 @@
 {
-	"name": "saigon/conpago-di",
+	"name": "conpago/conpago-di",
 	"description": "Conpago framework dependency injection container.",
 	"version": "0.0.1-alpha",
 	"type": "library",
@@ -21,7 +21,7 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"Saigon\\Conpago\\DI\\": "src"
+			"Conpago\\DI\\": "src"
 		}
 	}
 }

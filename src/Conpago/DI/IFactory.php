@@ -6,7 +6,7 @@
  * Time: 22:24
  */
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 
 interface IFactory {

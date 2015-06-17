@@ -1,10 +1,10 @@
 <?php
 
-namespace Saigon\Conpago\DI\Transformers;
+namespace Conpago\DI\Transformers;
 
-use Saigon\Conpago\DI\Implementation\IResolver;
-use Saigon\Conpago\DI\Meta;
-use Saigon\Conpago\DI\Resolvables\InstantiableResolvable;
+use Conpago\DI\Implementation\IResolver;
+use Conpago\DI\Meta;
+use Conpago\DI\Resolvables\InstantiableResolvable;
 
 class MetaTransformer extends Transformer
 {

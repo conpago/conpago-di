@@ -1,9 +1,9 @@
 <?php
 
-namespace Saigon\Conpago\DI\Parameters;
+namespace Conpago\DI\Parameters;
 
-use Saigon\Conpago\DI\Implementation\IResolver;
-use Saigon\Conpago\DI\Transformers\DirectTransformer;
+use Conpago\DI\Implementation\IResolver;
+use Conpago\DI\Transformers\DirectTransformer;
 
 class NamedParameter implements IParameter
 {
@@ -14,7 +14,7 @@ class NamedParameter implements IParameter
 
 	public static function tryCreate($overridenValue)
 	{
-		if (!($overridenValue instanceof \Saigon\Conpago\DI\NamedParameter))
+		if (!($overridenValue instanceof \Conpago\DI\NamedParameter))
 			return null;
 
 		return new NamedParameter($overridenValue->getName());

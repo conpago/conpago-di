@@ -1,9 +1,9 @@
 <?php
 
-namespace Saigon\Conpago\DI\Parameters;
+namespace Conpago\DI\Parameters;
 
-use Saigon\Conpago\DI\NamedParameter;
-use Saigon\Conpago\DI\Transformers\DirectTransformer;
+use Conpago\DI\NamedParameter;
+use Conpago\DI\Transformers\DirectTransformer;
 
 class TypedParameter extends Parameter
 {

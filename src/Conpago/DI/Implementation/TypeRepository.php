@@ -1,12 +1,12 @@
 <?php
 
-namespace Saigon\Conpago\DI\Implementation;
+namespace Conpago\DI\Implementation;
 
-use Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException;
-use Saigon\Conpago\DI\Exceptions\UnrelatedClassesException;
-use Saigon\Conpago\DI\Resolvables\CompositeResolvable;
-use Saigon\Conpago\DI\Transformers\DirectTransformer;
-use Saigon\Conpago\DI\Transformers\ITransformer;
+use Conpago\DI\Exceptions\ObjectNotRegisteredException;
+use Conpago\DI\Exceptions\UnrelatedClassesException;
+use Conpago\DI\Resolvables\CompositeResolvable;
+use Conpago\DI\Transformers\DirectTransformer;
+use Conpago\DI\Transformers\ITransformer;
 
 class TypeRepository implements IResolver
 {
@@ -71,7 +71,7 @@ class TypeRepository implements IResolver
 	{
 		foreach ($this->getTransformerTypes() as $transformerType)
 		{
-			$transformerClass = 'Saigon\\Conpago\\DI\\Transformers\\' . $transformerType . 'Transformer';
+			$transformerClass = '\Conpago\\DI\\Transformers\\' . $transformerType . 'Transformer';
 			if (($parsed = $transformerClass::tryParseTarget($id)) !== null)
 				return $parsed;
 		}

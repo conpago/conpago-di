@@ -1,11 +1,11 @@
 <?php
 
-namespace Saigon\Conpago\DI\Registerers;
+namespace Conpago\DI\Registerers;
 
 interface IRegisterer
 {
 	/**
-	 * @return \Saigon\Conpago\DI\Builders\IBuilder
+	 * @return \Conpago\DI\Builders\IBuilder
 	 */
 	function getBuilder();
 

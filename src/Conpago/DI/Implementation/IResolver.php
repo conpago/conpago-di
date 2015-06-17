@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI\Implementation;
+namespace Conpago\DI\Implementation;
 
-use Saigon\Conpago\DI\Transformers\ITransformer;
+use Conpago\DI\Transformers\ITransformer;
 
 interface IResolver
 {

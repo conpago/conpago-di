@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -13,7 +13,7 @@ class RegisterTypeNamedTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function test_RegisterNamed_ResolveSelf_Fail()
 	{

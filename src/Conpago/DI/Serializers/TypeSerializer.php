@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI\Serializers;
+namespace Conpago\DI\Serializers;
 
-use Saigon\Conpago\DI\Registerers\TypeRegisterer;
+use Conpago\DI\Registerers\TypeRegisterer;
 
 class TypeSerializer extends ObjectSerializer
 {

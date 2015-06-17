@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -128,7 +128,7 @@ class ContainerTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\MultipleBuilderUsesException
+	 * @expectedException \Conpago\DI\Exceptions\MultipleBuilderUsesException
 	 */
 	public function testMultipleBuilds_Fail()
 	{
@@ -158,7 +158,7 @@ class ContainerTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\MissingParameterException
+	 * @expectedException \Conpago\DI\Exceptions\MissingParameterException
 	 */
 	public function testMissingParameter_Fail()
 	{
@@ -286,6 +286,6 @@ class ContainerTest extends DITestCase
 
 	public function test_ContainerContainsSelf()
 	{
-		$this->assertSame($this->getContainer(), $this->resolve('Saigon\Conpago\DI\IContainer'));
+		$this->assertSame($this->getContainer(), $this->resolve('Conpago\DI\IContainer'));
 	}
 }

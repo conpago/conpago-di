@@ -1,10 +1,10 @@
 <?php
 
-namespace Saigon\Conpago\DI\Registerers;
+namespace Conpago\DI\Registerers;
 
-use Saigon\Conpago\DI\Builders\TypeBuilder;
-use Saigon\Conpago\DI\Exceptions\RegisteringInvalidTypeException;
-use Saigon\Conpago\DI\ITypeRegisterer;
+use Conpago\DI\Builders\TypeBuilder;
+use Conpago\DI\Exceptions\RegisteringInvalidTypeException;
+use Conpago\DI\ITypeRegisterer;
 
 class TypeRegisterer extends Registerer implements ITypeRegisterer
 {

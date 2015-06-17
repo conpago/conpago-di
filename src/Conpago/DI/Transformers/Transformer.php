@@ -1,10 +1,10 @@
 <?php
 
-namespace Saigon\Conpago\DI\Transformers;
+namespace Conpago\DI\Transformers;
 
-use Saigon\Conpago\DI\Implementation\IResolver;
-use Saigon\Conpago\DI\Resolvables\AliasResolvable;
-use Saigon\Conpago\DI\Resolvables\CompositeResolvable;
+use Conpago\DI\Implementation\IResolver;
+use Conpago\DI\Resolvables\AliasResolvable;
+use Conpago\DI\Resolvables\CompositeResolvable;
 
 abstract class Transformer implements ITransformer
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
 require_once 'DITestCase.php';
 
@@ -25,7 +25,7 @@ class ContainerBuilderTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\RegisteringInvalidInstanceException
+	 * @expectedException \Conpago\DI\Exceptions\RegisteringInvalidInstanceException
 	 */
 	public function testRegisterInvalidInstance_Fail()
 	{
@@ -50,7 +50,7 @@ class ContainerBuilderTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\UnrelatedClassesException
+	 * @expectedException \Conpago\DI\Exceptions\UnrelatedClassesException
 	 */
 	public function testRegisterInstanceAsUnrelated_Fail()
 	{
@@ -66,7 +66,7 @@ class ContainerBuilderTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function testRegisterInstanceNamed_ResolveSelf_Fail()
 	{
@@ -90,7 +90,7 @@ class ContainerBuilderTest extends DITestCase
 	}
 
 	/**
-	 * @expectedException \Saigon\Conpago\DI\Exceptions\ObjectNotRegisteredException
+	 * @expectedException \Conpago\DI\Exceptions\ObjectNotRegisteredException
 	 */
 	public function testRegisterNamed_ResolveSelf_Fail()
 	{

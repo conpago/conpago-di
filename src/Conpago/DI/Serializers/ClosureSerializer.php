@@ -1,9 +1,9 @@
 <?php
 
-namespace Saigon\Conpago\DI\Serializers;
+namespace Conpago\DI\Serializers;
 
-use Saigon\Conpago\DI\Exceptions\SerializingClosureException;
-use Saigon\Conpago\DI\Registerers\ClosureRegisterer;
+use Conpago\DI\Exceptions\SerializingClosureException;
+use Conpago\DI\Registerers\ClosureRegisterer;
 
 class ClosureSerializer extends ObjectSerializer
 {

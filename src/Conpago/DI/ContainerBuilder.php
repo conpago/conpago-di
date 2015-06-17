@@ -1,12 +1,12 @@
 <?php
 
-namespace Saigon\Conpago\DI;
+namespace Conpago\DI;
 
-use Saigon\Conpago\DI\Implementation\TypeRepository;
-use Saigon\Conpago\DI\Implementation\TypeRepositoryBuilder;
-use Saigon\Conpago\DI\Registerers\ClosureRegisterer;
-use Saigon\Conpago\DI\Registerers\InstanceRegisterer;
-use Saigon\Conpago\DI\Registerers\TypeRegisterer;
+use Conpago\DI\Implementation\TypeRepository;
+use Conpago\DI\Implementation\TypeRepositoryBuilder;
+use Conpago\DI\Registerers\ClosureRegisterer;
+use Conpago\DI\Registerers\InstanceRegisterer;
+use Conpago\DI\Registerers\TypeRegisterer;
 
 /**
  * Class ContainerBuilder
@@ -93,7 +93,7 @@ class ContainerBuilder implements IContainerBuilder, IPersistableContainerBuilde
 
 	private function registerBackreferenceToContainer()
 	{
-		$this->register('return $container;')->asA('Saigon\Conpago\DI\IContainer');
+		$this->register('return $container;')->asA('Conpago\DI\IContainer');
 	}
 
 	private function checkForMultipleUse()

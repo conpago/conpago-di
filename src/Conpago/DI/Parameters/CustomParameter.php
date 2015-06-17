@@ -1,11 +1,11 @@
 <?php
 
-namespace Saigon\Conpago\DI\Parameters;
+namespace Conpago\DI\Parameters;
 
-use Saigon\Conpago\DI\DefaultParameter;
-use Saigon\Conpago\DI\Implementation\IResolver,
-	Saigon\Conpago\DI\Exceptions\MissingParameterException;
-use Saigon\Conpago\DI\MissingParameter;
+use Conpago\DI\DefaultParameter;
+use Conpago\DI\Implementation\IResolver,
+	Conpago\DI\Exceptions\MissingParameterException;
+use Conpago\DI\MissingParameter;
 
 class CustomParameter implements IParameter
 {

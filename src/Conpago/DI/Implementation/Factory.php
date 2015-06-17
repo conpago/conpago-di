@@ -1,9 +1,9 @@
 <?php
 
-	namespace Saigon\Conpago\DI\Implementation;
+	namespace Conpago\DI\Implementation;
 
-	use Saigon\Conpago\DI\IFactory;
-	use Saigon\Conpago\DI\Transformers\DirectTransformer;
+	use Conpago\DI\IFactory;
+	use Conpago\DI\Transformers\DirectTransformer;
 
 	/**
 	 * Class Factory

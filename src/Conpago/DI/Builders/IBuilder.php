@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI\Builders;
+namespace Conpago\DI\Builders;
 
 interface IBuilder
 {

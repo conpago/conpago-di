@@ -1,11 +1,11 @@
 <?php
 
-namespace Saigon\Conpago\DI\Transformers;
+namespace Conpago\DI\Transformers;
 
-use Saigon\Conpago\DI\Implementation\IResolver;
-use Saigon\Conpago\DI\Resolvables\AliasResolvable;
-use Saigon\Conpago\DI\Resolvables\CompositeResolvable;
-use Saigon\Conpago\DI\Resolvables\InstantiableResolvable;
+use Conpago\DI\Implementation\IResolver;
+use Conpago\DI\Resolvables\AliasResolvable;
+use Conpago\DI\Resolvables\CompositeResolvable;
+use Conpago\DI\Resolvables\InstantiableResolvable;
 
 interface ITransformer
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Saigon\Conpago\DI\Parameters;
+namespace Conpago\DI\Parameters;
 
-use Saigon\Conpago\DI\Implementation\IResolver;
+use Conpago\DI\Implementation\IResolver;
 
 interface IParameter
 {

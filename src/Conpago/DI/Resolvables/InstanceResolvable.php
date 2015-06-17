@@ -1,6 +1,6 @@
 <?php
 
-namespace Saigon\Conpago\DI\Resolvables;
+namespace Conpago\DI\Resolvables;
 
 class InstanceResolvable extends InstantiableResolvable
 {
