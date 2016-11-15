@@ -4,6 +4,8 @@
 	"version": "0.0.1-alpha",
 	"type": "library",
 	"license": "MIT",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
 	"authors": [
 		{
 			"name": "Bartosz Gołek",
