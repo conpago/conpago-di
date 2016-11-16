@@ -2,7 +2,7 @@
 
 namespace Conpago\DI\Parameters;
 
-use Conpago\DI\NamedParameter;
+use Conpago\DI\NamedParameter as NParameter;
 use Conpago\DI\Transformers\DirectTransformer;
 
 class TypedParameter extends Parameter
@@ -13,7 +13,7 @@ class TypedParameter extends Parameter
 		if (!$parameterClass)
 			return null;
 
-		$target = ($overridenValue instanceof NamedParameter) ?
+		$target = ($overridenValue instanceof NParameter) ?
 			$overridenValue : '\\' . $parameterClass->getName();
 		return new TypedParameter($target, $parameter, DirectTransformer::def());
 	}
