@@ -4,8 +4,8 @@ namespace Conpago\DI;
 
 use Mocks\ContainerBuilderStorage;
 
-require_once 'tests/Saigon/Conpago/DI/mocks/ContainerBuilderStorage.php';
-require_once 'tests/Saigon/Conpago/DI/helpers/Classes.php';
+require_once 'tests/Conpago/DI/mocks/ContainerBuilderStorage.php';
+require_once 'tests/Conpago/DI/helpers/Classes.php';
 
 class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 {

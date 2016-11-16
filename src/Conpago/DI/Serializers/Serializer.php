@@ -2,6 +2,12 @@
 
 namespace Conpago\DI\Serializers;
 
+use Conpago\DI\DefaultParameter;
+use Conpago\DI\NamedParameter;
+use Conpago\DI\Registerers\ClosureRegisterer;
+use Conpago\DI\Registerers\InstanceRegisterer;
+use Conpago\DI\Registerers\TypeRegisterer;
+
 class Serializer implements ISerializer
 {
 	/**
@@ -65,15 +71,15 @@ class Serializer implements ISerializer
 
 	private function makeSerializerFor($componentClass)
 	{
-		if ($componentClass == '\Conpago\\DI\\Registerers\\TypeRegisterer')
+		if ($componentClass == TypeRegisterer::class)
 			return new TypeSerializer();
-		if ($componentClass == '\Conpago\\DI\\Registerers\\InstanceRegisterer')
+		if ($componentClass == InstanceRegisterer::class)
 			return new InstanceSerializer();
-		if ($componentClass == '\Conpago\\DI\\Registerers\\ClosureRegisterer')
+		if ($componentClass == ClosureRegisterer::class)
 			return new ClosureSerializer();
-		if ($componentClass == '\Conpago\\DI\\NamedParameter')
+		if ($componentClass == NamedParameter::class)
 			return new NamedParameterSerializer();
-		if ($componentClass == '\Conpago\\DI\\DefaultParameter')
+		if ($componentClass == DefaultParameter::class)
 			return new DefaultParameterSerializer();
 		throw new \RuntimeException("Unknown component type: {$componentClass}");
 	}

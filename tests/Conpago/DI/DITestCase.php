@@ -2,9 +2,9 @@
 
 namespace Conpago\DI;
 
-require_once realpath(__DIR__.'/../../../Saigon/Conpago/DI/helpers/Classes.php');
-require_once realpath(__DIR__.'/../../../Saigon/Conpago/DI/helpers/ClassesInTestNamespace.php');
-require_once realpath(__DIR__.'/../../../Saigon/Conpago/DI/helpers/ClassesInTestSubNamespace.php');
+require_once realpath('tests/Conpago/DI/helpers/Classes.php');
+require_once realpath('tests/Conpago/DI/helpers/ClassesInTestNamespace.php');
+require_once realpath('tests/Conpago/DI/helpers/ClassesInTestSubNamespace.php');
 
 abstract class DITestCase extends \PHPUnit_Framework_TestCase
 {
