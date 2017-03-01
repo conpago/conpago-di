@@ -2,14 +2,25 @@
 
 namespace Conpago\DI;
 
+use ClassA;
+use ClassB;
+use ClassC;
+use ClassD;
+use ClassE;
+use ClassE2;
+use InterfaceA1;
 use Mocks\ContainerBuilderStorage;
+use PHPUnit\Framework\TestCase;
 
 require_once 'tests/Conpago/DI/mocks/ContainerBuilderStorage.php';
 require_once 'tests/Conpago/DI/helpers/Classes.php';
 
-class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
+class ContainerBuilderPersisterTest extends TestCase
 {
+    /** @var ContainerBuilder */
 	private $builder;
+
+	/** @var IContainer */
 	private $container;
 
 	public function setUp()
@@ -31,22 +42,22 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_SimpleType()
 	{
-		$this->builder->registerType('ClassC');
+		$this->builder->registerType(ClassC::class);
 		$this->exchange();
-		$this->assertInstanceOf('ClassC', $this->container->resolve('ClassC'));
+		$this->assertInstanceOf(ClassC::class, $this->container->resolve(ClassC::class));
 	}
 
 	public function test_TypeWithAlias()
 	{
-		$this->builder->registerType('ClassC')->asA('ClassB');
+		$this->builder->registerType(ClassC::class)->asA(ClassB::class);
 		$this->exchange();
-		$this->assertInstanceOf('ClassC', $this->container->resolve('ClassB'));
+		$this->assertInstanceOf(ClassC::class, $this->container->resolve(ClassB::class));
 	}
 
 	public function test_TypeNamed()
 	{
-		$this->builder->registerType('ClassE')->withParams('e1')->named('e1')->named('e11');
-		$this->builder->registerType('ClassE')->withParams('e2')->named('e2');
+		$this->builder->registerType(ClassE::class)->withParams('e1')->named('e1')->named('e11');
+		$this->builder->registerType(ClassE::class)->withParams('e2')->named('e2');
 		$this->exchange();
 		$this->assertEquals('e1', $this->container->resolveNamed('e1')->value);
 		$this->assertEquals('e1', $this->container->resolveNamed('e11')->value);
@@ -55,38 +66,38 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_TypeKeyed()
 	{
-		$this->builder->registerType('ClassE2')->asA('ClassE2')->withParams('f1')->keyed('f1');
-		$this->builder->registerType('ClassE2')->asA('ClassE2')->withParams('f2')->keyed('f2');
+		$this->builder->registerType(ClassE2::class)->asA(ClassE2::class)->withParams('f1')->keyed('f1');
+		$this->builder->registerType(ClassE2::class)->asA(ClassE2::class)->withParams('f2')->keyed('f2');
 		$this->exchange();
-		$fs = $this->container->resolveAll('ClassE2');
+		$fs = $this->container->resolveAll(ClassE2::class);
 		$this->assertEquals('f1', $fs['f1']->value);
 		$this->assertEquals('f2', $fs['f2']->value);
 	}
 
 	public function test_TypeAsBases()
 	{
-		$this->builder->registerType('ClassB')->asBases();
+		$this->builder->registerType(ClassB::class)->asBases();
 		$this->exchange();
-		$this->assertInstanceOf('ClassB', $this->container->resolve('ClassA'));
+		$this->assertInstanceOf(ClassB::class, $this->container->resolve(ClassA::class));
 	}
 
 	public function test_TypeAsInterfaces()
 	{
-		$this->builder->registerType('ClassA')->asInterfaces();
+		$this->builder->registerType(ClassA::class)->asInterfaces();
 		$this->exchange();
-		$this->assertInstanceOf('ClassA', $this->container->resolve('InterfaceA1'));
+		$this->assertInstanceOf(ClassA::class, $this->container->resolve(InterfaceA1::class));
 	}
 
 	public function test_TypeAsSelf()
 	{
-		$this->builder->registerType('ClassB')->asBases()->asSelf();
+		$this->builder->registerType(ClassB::class)->asBases()->asSelf();
 		$this->exchange();
-		$this->assertInstanceOf('ClassB', $this->container->resolve('ClassB'));
+		$this->assertInstanceOf(ClassB::class, $this->container->resolve(ClassB::class));
 	}
 
 	public function test_TypeWithDefaultParam1()
 	{
-		$this->builder->registerType('ClassE')->named('f1');
+		$this->builder->registerType(ClassE::class)->named('f1');
 		$this->exchange();
 		$f = $this->container->resolveNamed('f1');
 		$this->assertEquals('default', $f->value);
@@ -94,7 +105,7 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_TypeWithDefaultParam2()
 	{
-		$this->builder->registerType('ClassE')->named('f1')->withParams(Parameter::def());
+		$this->builder->registerType(ClassE::class)->named('f1')->withParams(Parameter::def());
 		$this->exchange();
 		$f = $this->container->resolveNamed('f1');
 		$this->assertEquals('default', $f->value);
@@ -102,7 +113,7 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_TypeWithParamValue()
 	{
-		$this->builder->registerType('ClassE2')->named('f1')->withParams('f1');
+		$this->builder->registerType(ClassE2::class)->named('f1')->withParams('f1');
 		$this->exchange();
 		$f = $this->container->resolveNamed('f1');
 		$this->assertEquals('f1', $f->value);
@@ -110,8 +121,8 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_TypeWithNamedParam()
 	{
-		$this->builder->registerType('ClassE2')->withParams('f1')->named('f1');
-		$this->builder->registerType('ClassE2')->withParams(Parameter::named('f1'))->named('f2');
+		$this->builder->registerType(ClassE2::class)->withParams('f1')->named('f1');
+		$this->builder->registerType(ClassE2::class)->withParams(Parameter::named('f1'))->named('f2');
 		$this->exchange();
 		$f = $this->container->resolveNamed('f2');
 		$this->assertEquals('f1', $f->value->getName());
@@ -119,35 +130,35 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_TypeSingleton()
 	{
-		$this->builder->registerType('ClassD')->singleInstance();
+		$this->builder->registerType(ClassD::class)->singleInstance();
 		$this->exchange();
-		$d = $this->container->resolve('ClassD');
-		$this->assertSame($d, $this->container->resolve('ClassD'));
+		$d = $this->container->resolve(ClassD::class);
+		$this->assertSame($d, $this->container->resolve(ClassD::class));
 	}
 
 	public function test_SimpleInstance()
 	{
-		$this->builder->registerInstance(new \ClassE('e'));
+		$this->builder->registerInstance(new ClassE('e'));
 		$this->exchange();
-		$e = $this->container->resolve('ClassE');
-		$this->assertInstanceOf('ClassE', $e);
-		$this->assertSame($e, $this->container->resolve('ClassE'));
+		$e = $this->container->resolve(ClassE::class);
+		$this->assertInstanceOf(ClassE::class, $e);
+		$this->assertSame($e, $this->container->resolve(ClassE::class));
 		$this->assertEquals('e', $e->value);
 	}
 
 	public function test_InstanceWithAlias()
 	{
-		$this->builder->registerInstance(new \ClassE2('e2'))->asA('ClassE');
+		$this->builder->registerInstance(new ClassE2('e2'))->asA(ClassE::class);
 		$this->exchange();
-		$e = $this->container->resolve('ClassE');
-		$this->assertInstanceOf('ClassE2', $e);
+		$e = $this->container->resolve(ClassE::class);
+		$this->assertInstanceOf(ClassE2::class, $e);
 		$this->assertEquals('e2', $e->value);
 	}
 
 	public function test_InstanceNamed()
 	{
-		$this->builder->registerInstance(new \ClassE('e1'))->named('e1')->named('e11');
-		$this->builder->registerInstance(new \ClassE('e2'))->named('e2');
+		$this->builder->registerInstance(new ClassE('e1'))->named('e1')->named('e11');
+		$this->builder->registerInstance(new ClassE('e2'))->named('e2');
 		$this->exchange();
 		$this->assertEquals('e1', $this->container->resolveNamed('e1')->value);
 		$this->assertEquals('e1', $this->container->resolveNamed('e11')->value);
@@ -156,26 +167,26 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_InstanceKeyed()
 	{
-		$this->builder->registerInstance(new \ClassE('e1'))->asA('ClassE')->keyed('e1');
-		$this->builder->registerInstance(new \ClassE('e2'))->asA('ClassE')->keyed('e2');
+		$this->builder->registerInstance(new ClassE('e1'))->asA(ClassE::class)->keyed('e1');
+		$this->builder->registerInstance(new ClassE('e2'))->asA(ClassE::class)->keyed('e2');
 		$this->exchange();
-		$es = $this->container->resolveAll('ClassE');
+		$es = $this->container->resolveAll(ClassE::class);
 		$this->assertEquals('e1', $es['e1']->value);
 		$this->assertEquals('e2', $es['e2']->value);
 	}
 
 	public function test_InstanceAsSelf()
 	{
-		$this->builder->registerInstance(new \ClassE('e'))->asSelf()->named('e');
+		$this->builder->registerInstance(new ClassE('e'))->asSelf()->named('e');
 		$this->exchange();
-		$this->assertInstanceOf('ClassE', $this->container->resolve('ClassE'));
+		$this->assertInstanceOf(ClassE::class, $this->container->resolve(ClassE::class));
 	}
 
 	public function test_SimpleClosure()
 	{
-		$this->builder->register('return new \\ClassA')->asA('ClassA');
+		$this->builder->register('return new \\ClassA')->asA(ClassA::class);
 		$this->exchange();
-		$this->assertInstanceOf('ClassA', $this->container->resolve('ClassA'));
+		$this->assertInstanceOf(ClassA::class, $this->container->resolve(ClassA::class));
 	}
 
 	/**
@@ -183,23 +194,23 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 	 */
 	public function test_FunctionClosure_Fail()
 	{
-		$this->builder->register(function() { return new \ClassA; })->asA('ClassA');
+		$this->builder->register(function() { return new ClassA; })->asA(ClassA::class);
 		$this->exchange();
 	}
 
 	public function test_ClosureWithAlias()
 	{
-		$this->builder->register('return new \ClassE2(\'e2\')')->asA('ClassE');
+		$this->builder->register('return new ClassE2(\'e2\')')->asA(ClassE::class);
 		$this->exchange();
-		$e = $this->container->resolve('ClassE');
-		$this->assertInstanceOf('ClassE2', $e);
+		$e = $this->container->resolve(ClassE::class);
+		$this->assertInstanceOf(ClassE2::class, $e);
 		$this->assertEquals('e2', $e->value);
 	}
 
 	public function test_ClosureNamed()
 	{
-		$this->builder->register('return new \ClassE(\'e1\')')->named('e1')->named('e11');
-		$this->builder->register('return new \ClassE(\'e2\')')->named('e2');
+		$this->builder->register('return new ClassE(\'e1\')')->named('e1')->named('e11');
+		$this->builder->register('return new ClassE(\'e2\')')->named('e2');
 		$this->exchange();
 		$this->assertEquals('e1', $this->container->resolveNamed('e1')->value);
 		$this->assertEquals('e1', $this->container->resolveNamed('e11')->value);
@@ -208,19 +219,19 @@ class ContainerBuilderPersisterTest extends \PHPUnit_Framework_TestCase
 
 	public function test_ClosureKeyed()
 	{
-		$this->builder->register('return new \ClassE(\'e1\')')->asA('ClassE')->keyed('e1');
-		$this->builder->register('return new \ClassE(\'e2\')')->asA('ClassE')->keyed('e2');
+		$this->builder->register('return new ClassE(\'e1\')')->asA(ClassE::class)->keyed('e1');
+		$this->builder->register('return new ClassE(\'e2\')')->asA(ClassE::class)->keyed('e2');
 		$this->exchange();
-		$es = $this->container->resolveAll('ClassE');
+		$es = $this->container->resolveAll(ClassE::class);
 		$this->assertEquals('e1', $es['e1']->value);
 		$this->assertEquals('e2', $es['e2']->value);
 	}
 
 	public function test_ClosureSingleton()
 	{
-		$this->builder->register('return new \ClassD')->asA('ClassD')->singleInstance();
+		$this->builder->register('return new ClassD')->asA(ClassD::class)->singleInstance();
 		$this->exchange();
-		$d = $this->container->resolve('ClassD');
-		$this->assertSame($d, $this->container->resolve('ClassD'));
+		$d = $this->container->resolve(ClassD::class);
+		$this->assertSame($d, $this->container->resolve(ClassD::class));
 	}
 }

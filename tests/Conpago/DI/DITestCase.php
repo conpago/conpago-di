@@ -2,11 +2,13 @@
 
 namespace Conpago\DI;
 
+use PHPUnit\Framework\TestCase;
+
 require_once realpath('tests/Conpago/DI/helpers/Classes.php');
 require_once realpath('tests/Conpago/DI/helpers/ClassesInTestNamespace.php');
 require_once realpath('tests/Conpago/DI/helpers/ClassesInTestSubNamespace.php');
 
-abstract class DITestCase extends \PHPUnit_Framework_TestCase
+abstract class DITestCase extends TestCase
 {
 	/**
 	 * @var IContainerBuilder
